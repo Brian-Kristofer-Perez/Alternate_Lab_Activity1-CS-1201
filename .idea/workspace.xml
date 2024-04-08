@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35633240-b369-4035-8c08-b4a23deae6a6" name="Changes" comment="finally finished reworking the entire thing from ground up.">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="35633240-b369-4035-8c08-b4a23deae6a6" name="Changes" comment="finally finished reworking the entire thing from ground up." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,10 +80,19 @@
       <option name="project" value="LOCAL" />
       <updated>1712568138055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finally finished reworking the entire thing from ground up.">
+      <option name="closed" value="true" />
+      <created>1712568865064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712568865064</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="some extra error handling" />
     <MESSAGE value="finally finished reworking the entire thing from ground up." />
     <option name="LAST_COMMIT_MESSAGE" value="finally finished reworking the entire thing from ground up." />
   </component>

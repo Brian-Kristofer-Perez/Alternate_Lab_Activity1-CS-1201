@@ -48,6 +48,7 @@ def add_players():
 
 
         if len(Game["players"]) == 1 or len(Game["players"]) == 0:
+            clear_screen()
             print("\nThe game requires at least 2 players at minimum.")
             Game["players"] = []
             continue
@@ -167,6 +168,7 @@ def take_turn(turn_index):
             print("")
 
             if choice < 1 or choice > 2 or not choice:
+                clear_screen()
                 print("Invalid input. Please try again\n")
                 continue
             if choice == 1:
@@ -179,6 +181,7 @@ def take_turn(turn_index):
 
 
         except ValueError:
+            clear_screen()
             print("\nInput a valid choice.")
             continue
 
@@ -195,6 +198,7 @@ def play_card(turn_index):
         index -= 1
 
         if index < 0 or index > len(self["inventory"]):
+            clear_screen()
             print("Input a valid index!")
             take_turn(turn_index)
             return
@@ -230,10 +234,12 @@ def play_card(turn_index):
                 plus_four_to_next(turn_index)
 
         else:
+            clear_screen()
             print("\n\nPlease use a card that matches the recent card's icon or color.")
             take_turn(turn_index)
 
     except ValueError:
+        clear_screen()
         print("Please input a valid index")
         take_turn(turn_index)
 
@@ -266,6 +272,7 @@ def change_color():
             color = int(input("Input the new color: "))
 
             if color > 4 or color < 0 or not color:
+                clear_screen()
                 print("Invalid input. Please try again.")
                 continue
 
@@ -283,10 +290,12 @@ def change_color():
                 break
 
             if color > 4 or color < 1:
+                clear_screen()
                 print("Use a valid input")
                 continue
 
         except ValueError:
+            clear_screen()
             print("Please use a positive number")
 
 
@@ -346,6 +355,7 @@ def plus_take_turn(turn_index):
             print("\n")
 
             if choice < 1 or choice > 2 or not choice:
+                clear_screen()
                 print("Invalid input. Please try again\n")
                 continue
             if choice == 1:
@@ -364,6 +374,7 @@ def plus_take_turn(turn_index):
 
 
         except ValueError:
+            clear_screen()
             print("\n\nInput a valid choice.")
             continue
 
@@ -382,6 +393,7 @@ def plus_play_card(turn_index):
         index -= 1
 
         if index < 0 or index > len(self["inventory"]):
+            clear_screen()
             print("Input a valid index!")
             take_turn(turn_index)
             return
@@ -409,10 +421,12 @@ def plus_play_card(turn_index):
                 self["plus"] = False
 
         else:
+            clear_screen()
             print("\n\nPlease use a +2 card, or a +4 card.")
             take_turn(turn_index)
 
     except ValueError:
+        clear_screen()
         print("Please input a valid index")
         take_turn(turn_index)
 
@@ -439,10 +453,12 @@ def menu():
             choice = int(input("Enter your choice: "))
 
             if choice < 0:
+                clear_screen()
                 print("Invalid input, please use a positive number\n")
                 continue
 
             if choice > 3:
+                clear_screen()
                 print("Please input a number given in the choices\n")
                 continue
 
@@ -457,7 +473,9 @@ def menu():
                 exit()
 
         except ValueError:
+            clear_screen()
             print("\nPlease use a valid input\n")
+
             continue
 
 
