@@ -74,9 +74,7 @@ def draw_card(index, count):
         refresh_game_deck()
 
 
-
         self["inventory"].append(Game["deck"].pop(0))
-
 
 
 
