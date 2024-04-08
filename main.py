@@ -26,7 +26,7 @@ def create_deck():
         for icon in icons:
             Game["deck"].append([color, icon])
 
-    for i in range(4):  #special cards! change the range variable for more of them :)
+    for i in range(4):  #special cards! change the range variable for more of them (not recommended though)
         Game["deck"].append(["special", "+4"])
         Game["deck"].append(["special", "change color"])
 
