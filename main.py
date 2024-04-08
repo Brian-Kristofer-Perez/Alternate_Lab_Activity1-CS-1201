@@ -96,7 +96,24 @@ def play_game():
 
     for i in Game["turn_order"]:
         index = Game["turn_order"].index(i)
+
+
+
+
+
+
+        # Feel free to modify the count variable in order to change
+        # the starting card count per player when starting a new game
+
         draw_card(index, 7)
+
+
+
+
+
+
+
+
 
     while True:
 
@@ -106,6 +123,8 @@ def play_game():
 
             take_turn(Game["turn_index"])
             check_win_condition(Game["turn_index"])
+
+            clear_screen()
 
             if len(Game["turn_order"]) == 1:
                 print(f"{Game['turn_order'][0]['name']} lost the game.")
@@ -136,7 +155,7 @@ def take_turn(turn_index):
     while True:
         try:
 
-            clear_screen()
+
 
             self = Game["turn_order"][turn_index]
 
@@ -169,16 +188,19 @@ def take_turn(turn_index):
 
             if choice < 1 or choice > 2 or not choice:
                 clear_screen()
-                print("Invalid input. Please try again\n")
+                print("Invalid input. Please try again")
                 continue
             if choice == 1:
                 play_card(turn_index)
+                clear_screen()
                 break
             if choice == 2:
                 refresh_game_deck()
                 draw_card(turn_index, 1)
+                clear_screen()
                 break
 
+            clear_screen()
 
         except ValueError:
             clear_screen()
@@ -355,7 +377,6 @@ def plus_take_turn(turn_index):
             print("\n")
 
             if choice < 1 or choice > 2 or not choice:
-                clear_screen()
                 print("Invalid input. Please try again\n")
                 continue
             if choice == 1:
@@ -369,9 +390,10 @@ def plus_take_turn(turn_index):
                 Game["plus_stack"] = 0
                 self["plus"] = False
 
-
                 break
 
+
+            clear_screen()
 
         except ValueError:
             clear_screen()
